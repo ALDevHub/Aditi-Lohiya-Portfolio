@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aditi Lohiya – AI & ML Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F6FB; --surface:#FFFFFF; --ink:#12182B; --muted:#4A5470; --line:#D9DEEC;
+  --brand:#2F43C9; --brand-ink:#FFFFFF; --accent:#0B8F7F; --tint:#E6EAFB;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0E1220;--surface:#171C2F;--ink:#EEF1FA;--muted:#A9B2CC;--line:#2A3150;--brand:#8EA0FF;--brand-ink:#0E1220;--accent:#4FD1BD;--tint:#202848}
+}
+:root[data-theme="dark"]{--bg:#0E1220;--surface:#171C2F;--ink:#EEF1FA;--muted:#A9B2CC;--line:#2A3150;--brand:#8EA0FF;--brand-ink:#0E1220;--accent:#4FD1BD;--tint:#202848}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--brand)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+nav b{font-family:'Bricolage Grotesque',sans-serif;font-size:19px}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav ul a{color:var(--muted);text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap}
+nav ul a:hover{color:var(--brand)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font:500 14px Figtree,sans-serif;cursor:pointer}
+.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-.02em}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:56ch;margin:20px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--brand)}
+.btn.p{background:var(--brand);color:var(--brand-ink)}
+.btn.s{color:var(--brand)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.panel h3{font-size:18px;margin-bottom:14px}
+.stat{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.stat:first-of-type{border-top:0}
+.stat span{color:var(--muted)}
+.stat b{text-align:right}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(28px,4vw,38px);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{font-size:21px;margin-bottom:6px}
+.meta{color:var(--muted);font-size:15px;margin:0 0 12px}
+.card ul{margin:10px 0 0;padding-left:20px}
+.card li{margin:6px 0}
+.tag{display:inline-block;font-size:14px;font-weight:500;background:var(--tint);color:var(--brand);padding:3px 11px;border-radius:999px;margin:3px 4px 3px 0}
+.badge{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge{color:#0E1220}}
+:root[data-theme="dark"] .badge{color:#0E1220}
+.skillcol h3{font-size:19px;margin-bottom:10px}
+.tl{border-left:3px solid var(--brand);padding-left:22px}
+.tl .item+.item{margin-top:24px}
+.tl h3{font-size:20px}
+.contact a.row{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink);flex-wrap:wrap}
+.contact a.row span{color:var(--muted);min-width:90px}
+.contact a.row:hover b{color:var(--brand)}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:44px}nav b{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <b>Aditi Lohiya</b>
+  <ul>
+    <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
+</div></nav>
+
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <h1>Aditi Lohiya</h1>
+      <p class="lead">Final-year B.Tech (Hons.) student in AI &amp; Machine Learning, building practical machine learning and intelligent systems that solve real-world problems.</p>
+      <div class="btns">
+        <a class="btn p" href="#projects">View projects</a>
+        <a class="btn s" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <aside class="panel" aria-label="Quick facts">
+      <h3>At a glance</h3>
+      <div class="stat"><span>Studying</span><b>CSE (AI &amp; ML), 2023–2027</b></div>
+      <div class="stat"><span>University</span><b>Jagran Lakecity University</b></div>
+      <div class="stat"><span>Projects</span><b>2 built, 1 ongoing</b></div>
+      <div class="stat"><span>Hackathons</span><b>2 participated</b></div>
+      <div class="stat"><span>Based in</span><b>Bhopal, India</b></div>
+    </aside>
+  </header>
+
+  <section id="about"><h2>About me</h2>
+    <p style="max-width:68ch">I'm a final-year B.Tech (Hons.) student in Artificial Intelligence &amp; Machine Learning at Jagran Lakecity University. I enjoy solving real-world problems with machine learning and intelligent systems. I'm skilled in programming, frontend development and UI/UX design, and I focus on building AI/ML solutions that are practical and useful.</p>
+  </section>
+
+  <section id="skills"><h2>Technical skills</h2>
+    <div class="grid">
+      <div class="card skillcol"><h3>Artificial Intelligence &amp; ML</h3>
+        <span class="tag">Machine Learning</span><span class="tag">Prompt Engineering</span><span class="tag">XGBoost</span><span class="tag">PCA &amp; Anomaly Detection</span><span class="tag">RAG</span><span class="tag">Sentence Transformers</span><span class="tag">FAISS</span><span class="tag">Gemini API</span><span class="tag">Data Analysis</span>
+        <p class="meta" style="margin-top:14px"><span class="badge">2 hackathons</span> &nbsp;Participated in two hackathons, solving problems in team-based settings.</p>
+      </div>
+      <div class="card skillcol"><h3>Programming</h3>
+        <span class="tag">Python</span><span class="tag">C++</span><span class="tag">C</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+      </div>
+      <div class="card skillcol"><h3>Frontend &amp; Backend</h3>
+        <span class="tag">HTML &amp; CSS</span><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">SQLite</span>
+      </div>
+      <div class="card skillcol"><h3>Design &amp; Tools</h3>
+        <span class="tag">UI/UX Design</span><span class="tag">Graphic Design</span><span class="tag">Git &amp; GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects"><h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="badge">Ongoing · 2026</span>
+        <h3 style="margin-top:10px">AI Study Optimizer</h3>
+        <p class="meta">Major Project</p>
+        <ul>
+          <li>An AI-powered platform for personalized study planning, RAG-based Q&amp;A, quiz generation and progress tracking.</li>
+          <li>Supports PDF, image, PowerPoint and text ingestion using OCR/text extraction, semantic chunking and Sentence Transformers.</li>
+        </ul>
+        <p style="margin-bottom:0"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">FAISS</span><span class="tag">Gemini API</span></p>
+      </article>
+      <article class="card">
+        <span class="badge">Built</span>
+        <h3 style="margin-top:10px">Real-Time ETA Estimation System</h3>
+        <p class="meta">Machine Learning Project</p>
+        <ul>
+          <li>An ML-based system that estimates trip arrival times from distance, speed, traffic, weather and road-related features.</li>
+          <li>Uses XGBoost for prediction, evaluated with MAE, RMSE, MAPE and R².</li>
+        </ul>
+        <p style="margin-bottom:0"><span class="tag">XGBoost</span><span class="tag">Python</span></p>
+      </article>
+      <article class="card">
+        <span class="badge">Built</span>
+        <h3 style="margin-top:10px">Healthcare Insurance Fraud Detection</h3>
+        <p class="meta">Machine Learning Project</p>
+        <ul>
+          <li>An anomaly-detection approach for healthcare insurance claims that uses PCA to flag unusual claim patterns.</li>
+          <li>Applies preprocessing, dimensionality reduction and anomaly scoring for fraud analysis.</li>
+        </ul>
+        <p style="margin-bottom:0"><span class="tag">PCA</span><span class="tag">Anomaly Detection</span><span class="tag">Python</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience"><h2>Experience</h2>
+    <div class="tl">
+      <div class="item">
+        <h3>Web Development Intern</h3>
+        <p class="meta">Prodigy InfoTech · Nov 2024</p>
+        <ul style="padding-left:20px;margin:0">
+          <li>Developed responsive web pages and mini-projects using HTML, CSS and JavaScript.</li>
+          <li>Implemented UI components and improved website performance while strengthening practical problem-solving skills.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education"><h2>Education</h2>
+    <div class="grid">
+      <div class="card"><h3>B.Tech (Hons.) – CSE, AI &amp; Machine Learning</h3><p class="meta">Jagran Lakecity University, Bhopal · 2023–2027</p><p style="margin:0">CGPA: 8</p></div>
+      <div class="card"><h3>Higher Secondary</h3><p class="meta">St. Joseph's Co-Ed Sr. Sec. School, Bhopal</p></div>
+    </div>
+  </section>
+
+  <section id="certifications"><h2>Certifications</h2>
+    <div class="grid">
+      <div class="card"><h3 style="font-size:18px">Foundations of Cybersecurity</h3><p class="meta" style="margin:0">Google · Coursera</p></div>
+      <div class="card"><h3 style="font-size:18px">Play It Safe: Manage Security Risks</h3><p class="meta" style="margin:0">Google · Coursera</p></div>
+      <div class="card"><h3 style="font-size:18px">Fundamentals of Graphic Design</h3><p class="meta" style="margin:0">Coursera</p></div>
+      <div class="card"><h3 style="font-size:18px">Programming with JavaScript</h3><p class="meta" style="margin:0">Meta · Coursera</p></div>
+      <div class="card"><h3 style="font-size:18px">Introduction to Cloud</h3></div>
+      <div class="card"><h3 style="font-size:18px">Introduction to Cloud Computing Fundamentals</h3></div>
+    </div>
+  </section>
+
+  <section id="activities"><h2>Activities &amp; languages</h2>
+    <div class="grid">
+      <div class="card"><h3>Hackathons</h3><p style="margin:0">Participated in two hackathons, collaborating in team-based problem-solving environments.</p></div>
+      <div class="card"><h3>Languages</h3><p style="margin:0">English (Fluent) · Hindi (Fluent)</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact"><h2>Contact</h2>
+    <div style="max-width:560px">
+      <a class="row" href="mailto:aditilohiya2005@gmail.com"><span>Email</span><b>aditilohiya2005@gmail.com</b></a>
+      <a class="row" href="tel:+917470442907"><span>Phone</span><b>+91 7470442907</b></a>
+      <a class="row" href="https://shorturl.at/okjzP" target="_blank" rel="noopener"><span>LinkedIn</span><b>shorturl.at/okjzP</b></a>
+      <div class="row" style="display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><span style="color:var(--muted);min-width:90px">Location</span><b>Bhopal, Madhya Pradesh</b></div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© Aditi Lohiya · B.Tech (Hons.) CSE – AI &amp; ML</div></footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('theme'),root=document.documentElement;
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme',dark?'light':'dark');
+  });
+})();
+</script>
+</body>
+</html>

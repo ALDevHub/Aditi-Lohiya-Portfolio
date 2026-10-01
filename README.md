@@ -1,1 +1,0 @@
-# Aditi-Lohiya-Portfolio
